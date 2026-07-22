@@ -1,0 +1,1538 @@
+/*==================================================
+    KESHAVI GRAPHICS
+    ANIMATIONS.CSS
+    Part 3A
+==================================================*/
+
+/*====================================
+GLOBAL TRANSITIONS
+====================================*/
+
+*{
+    transition:0.35s ease;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+/*====================================
+FADE ANIMATIONS
+====================================*/
+
+.fade-up{
+    animation:fadeUp .8s ease forwards;
+}
+
+.fade-down{
+    animation:fadeDown .8s ease forwards;
+}
+
+.fade-left{
+    animation:fadeLeft .8s ease forwards;
+}
+
+.fade-right{
+    animation:fadeRight .8s ease forwards;
+}
+
+.fade{
+    animation:fade .8s ease forwards;
+}
+
+@keyframes fade{
+
+    from{
+
+        opacity:0;
+
+    }
+
+    to{
+
+        opacity:1;
+
+    }
+
+}
+
+@keyframes fadeUp{
+
+    from{
+
+        opacity:0;
+        transform:translateY(60px);
+
+    }
+
+    to{
+
+        opacity:1;
+        transform:translateY(0);
+
+    }
+
+}
+
+@keyframes fadeDown{
+
+    from{
+
+        opacity:0;
+        transform:translateY(-60px);
+
+    }
+
+    to{
+
+        opacity:1;
+        transform:translateY(0);
+
+    }
+
+}
+
+@keyframes fadeLeft{
+
+    from{
+
+        opacity:0;
+        transform:translateX(-60px);
+
+    }
+
+    to{
+
+        opacity:1;
+        transform:translateX(0);
+
+    }
+
+}
+
+@keyframes fadeRight{
+
+    from{
+
+        opacity:0;
+        transform:translateX(60px);
+
+    }
+
+    to{
+
+        opacity:1;
+        transform:translateX(0);
+
+    }
+
+}
+
+/*====================================
+ZOOM
+====================================*/
+
+.zoom-in{
+
+    animation:zoomIn .6s ease forwards;
+
+}
+
+.zoom-out{
+
+    animation:zoomOut .6s ease forwards;
+
+}
+
+@keyframes zoomIn{
+
+    from{
+
+        opacity:0;
+        transform:scale(.7);
+
+    }
+
+    to{
+
+        opacity:1;
+        transform:scale(1);
+
+    }
+
+}
+
+@keyframes zoomOut{
+
+    from{
+
+        transform:scale(1);
+
+    }
+
+    to{
+
+        transform:scale(.85);
+
+    }
+
+}
+
+/*====================================
+SLIDE
+====================================*/
+
+.slide-up{
+
+    animation:slideUp .7s ease;
+
+}
+
+.slide-down{
+
+    animation:slideDown .7s ease;
+
+}
+
+@keyframes slideUp{
+
+    from{
+
+        transform:translateY(120px);
+
+        opacity:0;
+
+    }
+
+    to{
+
+        transform:translateY(0);
+
+        opacity:1;
+
+    }
+
+}
+
+@keyframes slideDown{
+
+    from{
+
+        transform:translateY(-120px);
+
+        opacity:0;
+
+    }
+
+    to{
+
+        transform:translateY(0);
+
+        opacity:1;
+
+    }
+
+}
+
+/*====================================
+FLOATING HERO IMAGE
+====================================*/
+
+.hero-image img{
+
+    animation:floating 5s ease-in-out infinite;
+
+}
+
+@keyframes floating{
+
+    0%{
+
+        transform:translateY(0px);
+
+    }
+
+    50%{
+
+        transform:translateY(-18px);
+
+    }
+
+    100%{
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/*====================================
+BUTTON EFFECTS
+====================================*/
+
+.btn{
+
+    position:relative;
+    overflow:hidden;
+
+}
+
+.btn::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+    left:-100%;
+
+    width:100%;
+    height:100%;
+
+    background:rgba(255,255,255,.25);
+
+}
+
+.btn:hover::before{
+
+    left:100%;
+
+}
+
+.btn:hover{
+
+    transform:translateY(-5px);
+
+}
+
+/*====================================
+CARD EFFECT
+====================================*/
+
+.service-card,
+.review-card,
+.portfolio-card{
+
+    transform:translateY(0);
+
+}
+
+.service-card:hover,
+.review-card:hover,
+.portfolio-card:hover{
+
+    transform:translateY(-10px);
+
+}
+
+/*====================================
+ICON EFFECT
+====================================*/
+
+.service-icon i{
+
+    transition:.5s;
+
+}
+
+.service-card:hover .service-icon i{
+
+    transform:rotate(360deg) scale(1.15);
+
+}
+
+/*====================================
+IMAGE EFFECT
+====================================*/
+
+.portfolio-image{
+
+    overflow:hidden;
+
+}
+
+.portfolio-image img{
+
+    transition:.5s;
+
+}
+
+.portfolio-card:hover img{
+
+    transform:scale(1.12);
+
+}
+
+/*====================================
+REVIEW IMAGE
+====================================*/
+
+.review-header img{
+
+    transition:.4s;
+
+}
+
+.review-card:hover img{
+
+    transform:rotate(8deg) scale(1.08);
+
+}
+
+/*====================================
+SOCIAL ICON
+====================================*/
+
+.social-links a{
+
+    transition:.4s;
+
+}
+
+.social-links a:hover{
+
+    transform:translateY(-8px) rotate(360deg);
+
+}
+
+/*====================================
+LOADER
+====================================*/
+
+#loader{
+
+    position:fixed;
+
+    inset:0;
+
+    background:#fff;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    z-index:99999;
+
+}
+
+.loader-circle{
+
+    width:70px;
+    height:70px;
+
+    border:7px solid #ddd;
+
+    border-top:7px solid #2563EB;
+
+    border-radius:50%;
+
+    animation:loader 1s linear infinite;
+
+}
+
+@keyframes loader{
+
+    100%{
+
+        transform:rotate(360deg);
+
+    }
+
+}
+
+/*====================================
+PULSE
+====================================*/
+
+.pulse{
+
+    animation:pulse 2s infinite;
+
+}
+
+@keyframes pulse{
+
+    0%{
+
+        transform:scale(1);
+
+    }
+
+    50%{
+
+        transform:scale(1.08);
+
+    }
+
+    100%{
+
+        transform:scale(1);
+
+    }
+
+}
+
+/*====================================
+GLOW
+====================================*/
+
+.glow{
+
+    animation:glow 2.5s infinite;
+
+}
+
+@keyframes glow{
+
+    0%{
+
+        box-shadow:0 0 0 rgba(37,99,235,.3);
+
+    }
+
+    50%{
+
+        box-shadow:0 0 25px rgba(37,99,235,.7);
+
+    }
+
+    100%{
+
+        box-shadow:0 0 0 rgba(37,99,235,.3);
+
+    }
+
+}
+
+/*====================================
+BOUNCE
+====================================*/
+
+.bounce{
+
+    animation:bounce 1s infinite;
+
+}
+
+@keyframes bounce{
+
+    0%,100%{
+
+        transform:translateY(0);
+
+    }
+
+    50%{
+
+        transform:translateY(-10px);
+
+    }
+
+}
+
+/*====================================
+ROTATE
+====================================*/
+
+.rotate{
+
+    animation:rotate 10s linear infinite;
+
+}
+
+@keyframes rotate{
+
+    from{
+
+        transform:rotate(0deg);
+
+    }
+
+    to{
+
+        transform:rotate(360deg);
+
+    }
+
+}
+
+/*====================================
+END PART 3A
+====================================*/
+/*==================================================
+    KESHAVI GRAPHICS
+    ANIMATIONS.CSS
+    Part 3B-1
+==================================================*/
+
+
+/*====================================
+RIPPLE BUTTON EFFECT
+====================================*/
+
+.btn{
+    position:relative;
+    overflow:hidden;
+}
+
+.btn span.ripple{
+    position:absolute;
+    border-radius:50%;
+    transform:scale(0);
+    background:rgba(255,255,255,.45);
+    animation:ripple .7s linear;
+}
+
+@keyframes ripple{
+
+    to{
+
+        transform:scale(4);
+        opacity:0;
+
+    }
+
+}
+
+
+/*====================================
+BUTTON SHINE
+====================================*/
+
+.btn::after{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+    left:-120%;
+
+    width:70%;
+    height:100%;
+
+    background:linear-gradient(
+        120deg,
+        transparent,
+        rgba(255,255,255,.55),
+        transparent
+    );
+
+}
+
+.btn:hover::after{
+
+    left:150%;
+
+}
+
+
+/*====================================
+PORTFOLIO OVERLAY
+====================================*/
+
+.portfolio-card{
+
+    position:relative;
+    overflow:hidden;
+
+}
+
+.portfolio-overlay{
+
+    position:absolute;
+
+    inset:0;
+
+    background:rgba(15,23,42,.82);
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    flex-direction:column;
+
+    opacity:0;
+
+}
+
+.portfolio-card:hover .portfolio-overlay{
+
+    opacity:1;
+
+}
+
+.portfolio-overlay h3{
+
+    color:#fff;
+    margin-bottom:10px;
+
+}
+
+.portfolio-overlay p{
+
+    color:#ddd;
+
+}
+
+
+/*====================================
+PORTFOLIO ICON
+====================================*/
+
+.portfolio-overlay i{
+
+    color:#fff;
+    font-size:46px;
+    margin-bottom:20px;
+
+}
+
+.portfolio-card:hover i{
+
+    transform:scale(1.2);
+
+}
+
+
+/*====================================
+LIGHTBOX
+====================================*/
+
+.lightbox{
+
+    position:fixed;
+
+    inset:0;
+
+    background:rgba(0,0,0,.92);
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    opacity:0;
+
+    visibility:hidden;
+
+    z-index:99999;
+
+}
+
+.lightbox.active{
+
+    opacity:1;
+    visibility:visible;
+
+}
+
+.lightbox img{
+
+    width:85%;
+    max-width:950px;
+    border-radius:15px;
+
+}
+
+.lightbox-close{
+
+    position:absolute;
+
+    top:30px;
+    right:40px;
+
+    font-size:40px;
+
+    color:#fff;
+
+    cursor:pointer;
+
+}
+
+
+/*====================================
+SCROLL REVEAL
+====================================*/
+
+.reveal{
+
+    opacity:0;
+
+    transform:translateY(80px);
+
+}
+
+.reveal.active{
+
+    opacity:1;
+
+    transform:translateY(0);
+
+}
+
+.reveal-left{
+
+    opacity:0;
+
+    transform:translateX(-80px);
+
+}
+
+.reveal-left.active{
+
+    opacity:1;
+
+    transform:translateX(0);
+
+}
+
+.reveal-right{
+
+    opacity:0;
+
+    transform:translateX(80px);
+
+}
+
+.reveal-right.active{
+
+    opacity:1;
+
+    transform:translateX(0);
+
+}
+
+
+/*====================================
+NAVBAR SCROLL
+====================================*/
+
+header.scrolled{
+
+    background:#fff;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+
+}
+
+
+/*====================================
+BACK TO TOP
+====================================*/
+
+#backTop{
+
+    position:fixed;
+
+    bottom:90px;
+
+    right:30px;
+
+    width:55px;
+
+    height:55px;
+
+    border-radius:50%;
+
+    background:#2563EB;
+
+    color:#fff;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    cursor:pointer;
+
+    opacity:0;
+
+    visibility:hidden;
+
+    z-index:999;
+
+}
+
+#backTop.show{
+
+    opacity:1;
+    visibility:visible;
+
+}
+
+#backTop:hover{
+
+    transform:translateY(-6px);
+
+}
+
+
+/*====================================
+WHATSAPP FLOATING BUTTON
+====================================*/
+
+.whatsapp{
+
+    position:fixed;
+
+    bottom:20px;
+
+    right:25px;
+
+    width:65px;
+
+    height:65px;
+
+    border-radius:50%;
+
+    background:#25D366;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    color:#fff;
+
+    font-size:32px;
+
+    z-index:999;
+
+    box-shadow:0 15px 35px rgba(0,0,0,.2);
+
+}
+
+.whatsapp:hover{
+
+    transform:scale(1.1);
+
+}
+
+.whatsapp i{
+
+    animation:whatsappPulse 2s infinite;
+
+}
+
+@keyframes whatsappPulse{
+
+    0%{
+
+        transform:scale(1);
+
+    }
+
+    50%{
+
+        transform:scale(1.15);
+
+    }
+
+    100%{
+
+        transform:scale(1);
+
+    }
+
+}
+
+
+/*====================================
+TEXT CURSOR
+====================================*/
+
+.typing{
+
+    border-right:3px solid #2563EB;
+
+    white-space:nowrap;
+
+    overflow:hidden;
+
+}
+
+@keyframes blink{
+
+    50%{
+
+        border-color:transparent;
+
+    }
+
+}
+
+.typing{
+
+    animation:blink .7s infinite;
+
+}
+
+
+/*====================================
+END PART 3B-1
+====================================*/
+/*==================================================
+    KESHAVI GRAPHICS
+    ANIMATIONS.CSS
+    Part 3B-2
+==================================================*/
+
+
+/*====================================
+SHAKE ANIMATION
+====================================*/
+
+.shake{
+    animation:shake .6s ease;
+}
+
+@keyframes shake{
+
+0%{transform:translateX(0);}
+20%{transform:translateX(-8px);}
+40%{transform:translateX(8px);}
+60%{transform:translateX(-6px);}
+80%{transform:translateX(6px);}
+100%{transform:translateX(0);}
+
+}
+
+
+/*====================================
+FLIP
+====================================*/
+
+.flip{
+
+    animation:flip .8s ease;
+
+}
+
+@keyframes flip{
+
+0%{
+
+transform:perspective(600px) rotateY(90deg);
+opacity:0;
+
+}
+
+100%{
+
+transform:perspective(600px) rotateY(0);
+opacity:1;
+
+}
+
+}
+
+
+/*====================================
+SWING
+====================================*/
+
+.swing{
+
+animation:swing 1s ease;
+
+}
+
+@keyframes swing{
+
+20%{transform:rotate(15deg);}
+40%{transform:rotate(-10deg);}
+60%{transform:rotate(5deg);}
+80%{transform:rotate(-3deg);}
+100%{transform:rotate(0);}
+
+}
+
+
+/*====================================
+HEARTBEAT
+====================================*/
+
+.heartbeat{
+
+animation:heartbeat 1.6s infinite;
+
+}
+
+@keyframes heartbeat{
+
+0%{
+
+transform:scale(1);
+
+}
+
+20%{
+
+transform:scale(1.12);
+
+}
+
+40%{
+
+transform:scale(.95);
+
+}
+
+60%{
+
+transform:scale(1.1);
+
+}
+
+100%{
+
+transform:scale(1);
+
+}
+
+}
+
+
+/*====================================
+FLOATING SHAPES
+====================================*/
+
+.shape{
+
+position:absolute;
+border-radius:50%;
+opacity:.15;
+
+animation:floatShape 8s ease-in-out infinite;
+
+}
+
+@keyframes floatShape{
+
+0%{
+
+transform:translateY(0);
+
+}
+
+50%{
+
+transform:translateY(-25px);
+
+}
+
+100%{
+
+transform:translateY(0);
+
+}
+
+}
+
+
+/*====================================
+IMAGE HOVER
+====================================*/
+
+.img-hover{
+
+overflow:hidden;
+
+}
+
+.img-hover img{
+
+transition:.5s;
+
+}
+
+.img-hover:hover img{
+
+transform:scale(1.08);
+
+}
+
+
+/*====================================
+ICON HOVER
+====================================*/
+
+.icon-hover:hover{
+
+transform:rotate(360deg);
+
+}
+
+
+/*====================================
+BUTTON PRESS
+====================================*/
+
+.btn:active{
+
+transform:scale(.95);
+
+}
+
+
+/*====================================
+NAV LINK HOVER
+====================================*/
+
+.nav-links a{
+
+position:relative;
+
+}
+
+.nav-links a::after{
+
+content:"";
+
+position:absolute;
+
+left:0;
+bottom:-6px;
+
+width:0;
+
+height:2px;
+
+background:#2563EB;
+
+transition:.35s;
+
+}
+
+.nav-links a:hover::after{
+
+width:100%;
+
+}
+
+
+/*====================================
+FORM FOCUS
+====================================*/
+
+.form-control:focus{
+
+transform:scale(1.01);
+
+}
+
+
+/*====================================
+UTILITY CLASSES
+====================================*/
+
+.delay-1{
+
+animation-delay:.2s;
+
+}
+
+.delay-2{
+
+animation-delay:.4s;
+
+}
+
+.delay-3{
+
+animation-delay:.6s;
+
+}
+
+.delay-4{
+
+animation-delay:.8s;
+
+}
+
+.delay-5{
+
+animation-delay:1s;
+
+}
+
+.duration-fast{
+
+animation-duration:.4s;
+
+}
+
+.duration-normal{
+
+animation-duration:.8s;
+
+}
+
+.duration-slow{
+
+animation-duration:1.5s;
+
+}
+
+
+/*====================================
+HOVER LIFT
+====================================*/
+
+.hover-lift{
+
+transition:.35s;
+
+}
+
+.hover-lift:hover{
+
+transform:translateY(-10px);
+
+}
+
+
+/*====================================
+HOVER SCALE
+====================================*/
+
+.hover-scale{
+
+transition:.35s;
+
+}
+
+.hover-scale:hover{
+
+transform:scale(1.05);
+
+}
+
+
+/*====================================
+HOVER ROTATE
+====================================*/
+
+.hover-rotate{
+
+transition:.35s;
+
+}
+
+.hover-rotate:hover{
+
+transform:rotate(5deg);
+
+}
+
+
+/*====================================
+SPIN
+====================================*/
+
+.spin{
+
+animation:spin 10s linear infinite;
+
+}
+
+@keyframes spin{
+
+from{
+
+transform:rotate(0deg);
+
+}
+
+to{
+
+transform:rotate(360deg);
+
+}
+
+}
+
+
+/*====================================
+PULSE BORDER
+====================================*/
+
+.pulse-border{
+
+animation:pulseBorder 2s infinite;
+
+}
+
+@keyframes pulseBorder{
+
+0%{
+
+box-shadow:0 0 0 rgba(37,99,235,.4);
+
+}
+
+70%{
+
+box-shadow:0 0 0 15px rgba(37,99,235,0);
+
+}
+
+100%{
+
+box-shadow:0 0 0 rgba(37,99,235,0);
+
+}
+
+}
+
+
+/*====================================
+DARK MODE TRANSITION
+====================================*/
+
+body,
+header,
+footer,
+.service-card,
+.review-card,
+.portfolio-card,
+.contact-form,
+.review-form,
+.btn,
+.btn-outline{
+
+transition:
+
+background-color .35s ease,
+color .35s ease,
+border-color .35s ease,
+box-shadow .35s ease;
+
+}
+
+
+/*====================================
+ANIMATION HELPERS
+====================================*/
+
+.animate{
+
+animation-fill-mode:both;
+
+}
+
+.infinite{
+
+animation-iteration-count:infinite;
+
+}
+
+.once{
+
+animation-iteration-count:1;
+
+}
+
+
+/*====================================
+SCROLL INDICATOR
+====================================*/
+
+.scroll-indicator{
+
+position:fixed;
+top:0;
+left:0;
+height:4px;
+background:linear-gradient(
+90deg,
+#2563EB,
+#7C3AED,
+#06B6D4
+);
+
+width:0;
+
+z-index:99999;
+
+}
+
+
+/*====================================
+END OF ANIMATIONS.CSS
+====================================*/
+.animate{
+
+    animation:fadeUp .8s ease forwards;
+
+}
+
+@keyframes fadeUp{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(40px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+/*==========================================
+BUTTON RIPPLE
+==========================================*/
+
+.primary-btn,
+.secondary-btn{
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+.ripple{
+
+    position:absolute;
+
+    width:20px;
+
+    height:20px;
+
+    border-radius:50%;
+
+    background:rgba(255,255,255,.6);
+
+    transform:translate(-50%,-50%) scale(0);
+
+    animation:ripple .6s linear;
+
+}
+
+@keyframes ripple{
+
+    to{
+
+        transform:translate(-50%,-50%) scale(18);
+
+        opacity:0;
+
+    }
+
+}
