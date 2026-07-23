@@ -3083,7 +3083,7 @@ FLOATING WHATSAPP
 }
 /* Resize About Section Image */
 .about-left img {
-    max-width: 400px; /* Decrease this number to make it smaller, or increase to make it larger */
+    max-width: 300px; /* Decrease this number to make it smaller, or increase to make it larger */
     width: 100%;
     height: auto;
     margin: 0 auto; /* This ensures the smaller image stays perfectly centered */
