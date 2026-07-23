@@ -3083,7 +3083,7 @@ FLOATING WHATSAPP
     /* Reset Hero Image Crop for Mobile/Tablet */
     @media (max-width: 1200px) {
     .hero-right img {
-        margin-top: 0; /* Drops the image back down below the navbar */
+        margin-top: 10px; /* Drops the image back down below the navbar */
         height: 450px; /* Slightly shorter so it looks great on a phone screen */
     }
 }
