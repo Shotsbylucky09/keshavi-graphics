@@ -78,13 +78,13 @@ Laptop
 
 .hero-left{
 
-    order:2;
+    order:1;
 
 }
 
 .hero-right{
 
-    order:1;
+    order:2;
 
 }
 
@@ -201,107 +201,61 @@ Tablet
 /*==========================================
 Mobile
 ==========================================*/
-
 @media (max-width:768px){
-
-.navbar{
-
-    height:75px;
-
+    .navbar{
+        height:75px;
+    }
+    .logo span{
+        font-size:22px;
+    }
+    .logo img{
+        width:48px;
+    }
+    .hero{
+        padding-top:110px;
+    }
+    .hero-container{
+        gap:35px;
+    }
+    .hero-left h1{
+        font-size:42px;
+    }
+    .hero-left h2{
+        font-size:20px;
+    }
+    .hero-description{
+        font-size:15px;
+    }
+    .hero-buttons{
+        flex-direction:column;
+    }
+    .primary-btn,
+    .secondary-btn{
+        width:100%;
+    }
+    .hero-stats{
+        flex-direction:column;
+        align-items:center;
+        margin-bottom:50px; /* NEW: Pushes the image down from the entire stat block */
+    }
+    .hero-stats div{
+        width:100%;
+        max-width:300px;
+        margin-bottom:20px; /* NEW: Gives each stat box some breathing room */
+    }
+    .hero-right{
+        margin-top:30px; /* NEW: Forces the image to step down */
+    }
+    .about-right h3{
+        font-size:30px;
+    }
+    .section-title{
+        margin-bottom:45px;
+    }
+    .section-title h2{
+        font-size:30px;
+    }
 }
-
-.logo span{
-
-    font-size:22px;
-
-}
-
-.logo img{
-
-    width:48px;
-
-}
-
-.hero{
-
-    padding-top:110px;
-
-}
-
-.hero-container{
-
-    gap:35px;
-
-}
-
-.hero-left h1{
-
-    font-size:42px;
-
-}
-
-.hero-left h2{
-
-    font-size:20px;
-
-}
-
-.hero-description{
-
-    font-size:15px;
-
-}
-
-.hero-buttons{
-
-    flex-direction:column;
-
-}
-
-.primary-btn,
-
-.secondary-btn{
-
-    width:100%;
-
-}
-
-.hero-stats{
-
-    flex-direction:column;
-
-    align-items:center;
-
-}
-
-.hero-stats div{
-
-    width:100%;
-
-    max-width:300px;
-
-}
-
-.about-right h3{
-
-    font-size:30px;
-
-}
-
-.section-title{
-
-    margin-bottom:45px;
-
-}
-
-.section-title h2{
-
-    font-size:30px;
-
-}
-
-}
-
 /*==================================================
 END OF PART 1
 ==================================================*/
