@@ -233,18 +233,29 @@ Mobile
     .secondary-btn{
         width:100%;
     }
-    .hero-stats{
-        flex-direction:column;
-        align-items:center;
-        margin-bottom:50px; /* NEW: Pushes the image down from the entire stat block */
+    /* Fixes the container so it expands instead of letting stats overflow */
+    .hero-left {
+        height: auto !important; 
     }
-    .hero-stats div{
-        width:100%;
-        max-width:300px;
-        margin-bottom:20px; /* NEW: Gives each stat box some breathing room */
+
+    .hero-stats {
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 50px !important; 
     }
-    .hero-right{
-        margin-top:30px; /* NEW: Forces the image to step down */
+
+    .hero-stats div {
+        width: 100%;
+        max-width: 300px;
+        margin-bottom: 20px !important;
+    }
+
+    /* Forces the image down and clears any desktop positioning */
+    .hero-right {
+        margin-top: 60px !important;
+        position: relative !important;
+        transform: none !important;
+    }
     }
     .about-right h3{
         font-size:30px;
