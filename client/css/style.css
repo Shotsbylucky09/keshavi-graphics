@@ -3079,5 +3079,5 @@ FLOATING WHATSAPP
     object-position: top center; 
     width: 100%; 
     max-width: 450px; 
-    margin-top: -60px; /* THIS IS THE MAGIC LINE: It pulls the image directly upward! */
+    margin-top: -130px; /* THIS IS THE MAGIC LINE: It pulls the image directly upward! */
 }
