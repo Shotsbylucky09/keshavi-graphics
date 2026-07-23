@@ -410,41 +410,25 @@ MOBILE (768px)
     /*==============================
     MOBILE MENU
     ==============================*/
-
-    .mobile-menu{
-
-        position:fixed;
-
-        top:0;
-
-        right:-100%;
-
-        width:300px;
-
-        height:100vh;
-
-        background:#ffffff;
-
-        display:flex;
-
-        flex-direction:column;
-
-        justify-content:flex-start;
-
-        padding-top:100px;
-
-        transition:.4s;
-
-        z-index:9999;
-
-        box-shadow:-10px 0 30px rgba(0,0,0,.15);
-
+    .mobile-menu {
+        position: fixed;
+        top: 0;
+        left: -100%; /* Fixed: Explicitly hides it off the left screen edge */
+        width: 300px;
+        height: 100vh;
+        background: rgba(255, 255, 255, 0.85); /* Modern translucent background */
+        backdrop-filter: blur(15px); /* Frosted glass effect */
+        -webkit-backdrop-filter: blur(15px);
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        padding-top: 100px;
+        transition: 0.5s cubic-bezier(0.25, 0.8, 0.25, 1); /* Ultra-smooth slide animation */
+        z-index: 9999;
+        box-shadow: 10px 0 30px rgba(0,0,0,0.1);
     }
-
-    .mobile-menu.active{
-
-        right:0;
-
+    .mobile-menu.active {
+        left: 0; /* Slides into view from the left */
     }
 
     .mobile-menu a{
