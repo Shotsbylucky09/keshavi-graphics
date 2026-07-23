@@ -3074,9 +3074,10 @@ FLOATING WHATSAPP
 }
 /* Custom Hero Image Crop */
 .hero-right img {
-    height: 550px; /* Adjust this number to make it shorter or taller */
-    object-fit: cover; /* Prevents the image from squishing */
-    object-position: top center; /* Keeps the head visible and crops from the bottom up */
-    width: 100%; /* Ensures it fills its container */
-    max-width: 450px; /* Keeps the width constrained */
+    height: 480px; /* Slightly shorter so the whole thing fits on your screen */
+    object-fit: cover; 
+    object-position: top center; 
+    width: 100%; 
+    max-width: 450px; 
+    margin-top: -60px; /* THIS IS THE MAGIC LINE: It pulls the image directly upward! */
 }
