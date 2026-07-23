@@ -3081,3 +3081,12 @@ FLOATING WHATSAPP
     max-width: 450px; 
     margin-top: -130px; /* THIS IS THE MAGIC LINE: It pulls the image directly upward! */
 }
+/* Resize About Section Image */
+.about-left img {
+    max-width: 400px; /* Decrease this number to make it smaller, or increase to make it larger */
+    width: 100%;
+    height: auto;
+    margin: 0 auto; /* This ensures the smaller image stays perfectly centered */
+    display: block;
+    border-radius: 12px; /* Adds a nice smooth curve to the corners to keep that premium feel */
+}
