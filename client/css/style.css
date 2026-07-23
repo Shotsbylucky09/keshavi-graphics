@@ -3080,11 +3080,15 @@ FLOATING WHATSAPP
     width: 100%; 
     max-width: 450px; 
     margin-top: -130px; /* THIS IS THE MAGIC LINE: It pulls the image directly upward! */
-    /* Reset Hero Image Crop for Mobile/Tablet */
-    @media (max-width: 1200px) {
+    /* Reseidth: 1200px) {
+    .hero-right imt Hero Image Crop for Mobile/Tablet */
+   /* Reset and Shrink Hero Image for Mobile View */
+@media (max-width: 992px) {
     .hero-right img {
-        margin-top: 200px; /* Drops the image back down below the navbar */
-        height: 400px; /* Slightly shorter so it looks great on a phone screen */
+        margin-top: 20px !important; /* Forces the image down, safely away from the navbar */
+        height: 320px !important; /* Drastically shorter so the text below pulls up */
+        max-width: 280px !important; /* Shrinks the width to keep it perfectly proportioned */
+        object-position: top center !important; /* Ensures your head stays in the crop */
     }
 }
 }
