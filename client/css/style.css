@@ -3080,6 +3080,13 @@ FLOATING WHATSAPP
     width: 100%; 
     max-width: 450px; 
     margin-top: -130px; /* THIS IS THE MAGIC LINE: It pulls the image directly upward! */
+    /* Reset Hero Image Crop for Mobile/Tablet */
+    @media (max-width: 1200px) {
+    .hero-right img {
+        margin-top: 0; /* Drops the image back down below the navbar */
+        height: 450px; /* Slightly shorter so it looks great on a phone screen */
+    }
+}
 }
 /* Resize About Section Image */
 .about-left img {
