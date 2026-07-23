@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", () => {
             // Show a temporary loading state
             portfolioGrid.innerHTML = '<p style="text-align:center; width:100%; color: var(--text-muted);">Loading projects...</p>';
 
-            const response = await fetch("http://localhost:5000/projects");
+            const response = await fetch("https://keshavi-backend.onrender.com/projects");
             const data = await response.json();
 
             if (data.success && data.projects.length > 0) {
